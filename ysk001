@@ -1,0 +1,44 @@
+int x;
+int y;
+int c;
+int a;
+int b;
+void setup() {
+ size(600,400);
+ background(22894);
+  x=300;
+ y=200;a=0;b=1;c=2;
+}
+ void draw() {
+
+
+ x+=random(-10,10);//控制跳动范围
+ y+=random(-10,10); 
+fill(a,b,c);
+a++;b=b+2;c=c+3;
+if(a>255){
+  a=a-255;
+}
+
+if(c>255){
+c=c-255;
+}
+if(b>255){
+c=b-255;
+}//变化颜色
+ ellipse(x,y,24,28);
+ if (x>=576){
+ x=x-12;
+ }
+ if(y>=372){
+ y=y-14;
+ }
+ if(x<=24){
+ x=x+12;
+ }
+ if(y<=28){
+ y=y+14;}
+ delay(50);
+ 
+ 
+}
